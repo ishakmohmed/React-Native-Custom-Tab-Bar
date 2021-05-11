@@ -1,15 +1,13 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <NavigationContainer>
-        <AppNavigator />
-      </NavigationContainer>
-    </View>
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }
 

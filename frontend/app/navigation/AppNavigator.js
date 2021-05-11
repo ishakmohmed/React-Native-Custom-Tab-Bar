@@ -1,7 +1,9 @@
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import QueueScreen from "../screens/QueueScreen";
+
 import OrderScreen from "../screens/OrderScreen";
+import QueueScreen from "../screens/QueueScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -18,11 +20,11 @@ const AppNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Queue"
+        name="Order"
         component={OrderScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
         }}
       />
