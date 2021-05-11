@@ -1,32 +1,36 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import TabBar from "../components/TabBar";
 
 import OrderScreen from "../screens/OrderScreen";
 import QueueScreen from "../screens/QueueScreen";
+import AddFoodScreen from "../screens/AddFoodScreen";
+import EditFoodScreen from "../screens/EditFoodScreen";
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator tabBar={(props) => <TabBar {...props} />}>
       <Tab.Screen
-        name="Queue"
+        name="queue"
         component={QueueScreen}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
-        }}
+        initialParams={{ icon: "people" }}
       />
       <Tab.Screen
-        name="Order"
+        name="add food"
+        component={AddFoodScreen}
+        initialParams={{ icon: "add" }}
+      />
+      <Tab.Screen
+        name="edit food"
+        component={EditFoodScreen}
+        initialParams={{ icon: "edit" }}
+      />
+      <Tab.Screen
+        name="order"
         component={OrderScreen}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
-          ),
-        }}
+        initialParams={{ icon: "fastfood" }}
       />
     </Tab.Navigator>
   );
