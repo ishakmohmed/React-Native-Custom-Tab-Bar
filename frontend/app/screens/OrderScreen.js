@@ -1,11 +1,12 @@
 import React from "react";
 import { Text } from "react-native";
 import Screen from "../components/Screen";
+import HeadingText from "../components/HeadingText";
 
 function OrderScreen() {
   return (
     <Screen>
-      <Text>This is Order Screen!</Text>
+      <HeadingText>Order Now</HeadingText>
     </Screen>
   );
 }

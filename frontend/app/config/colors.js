@@ -1,6 +1,6 @@
 export default {
   pink: "#fc5c65",
-  lightGray: "#829399",
-  white: "#fff",
+  strongPink: "#D81159",
+  white: "#FFFFFF",
   darkBlue: "#222E50",
 };

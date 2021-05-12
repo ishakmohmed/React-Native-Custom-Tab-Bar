@@ -1,11 +1,13 @@
 import React from "react";
-import { Text } from "react-native";
 import Screen from "../components/Screen";
+import HeadingText from "../components/HeadingText";
+import QueueCard from "../components/QueueCard";
 
 function QueueScreen() {
   return (
     <Screen>
-      <Text>This is Queue Screen!</Text>
+      <HeadingText>Currently Waiting</HeadingText>
+      <QueueCard />
     </Screen>
   );
 }

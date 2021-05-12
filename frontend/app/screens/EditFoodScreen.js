@@ -1,11 +1,12 @@
 import React from "react";
 import { Text } from "react-native";
 import Screen from "../components/Screen";
+import HeadingText from "../components/HeadingText";
 
 function EditFoodScreen() {
   return (
     <Screen>
-      <Text>This is EditFood Screen!</Text>
+      <HeadingText>Edit Stock</HeadingText>
     </Screen>
   );
 }
